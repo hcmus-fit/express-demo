@@ -33,7 +33,6 @@ const { ObjectId} = require('mongodb');
 
 exports.list = async () => {
     console.log('model db');
-    // console.dir(db());
     const booksCollection = db().collection('books');
     const books = await booksCollection.find({}).toArray();
     console.dir(books);
